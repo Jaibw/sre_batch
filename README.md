@@ -31,7 +31,7 @@ ansible-playbook users.yaml
 # Secure Playbook   
 <pre>
 cd ~/name
-wget https://raw.githubusercontent.com/Jaibw/sre_batch/main/loop/users.yaml
+wget -O users.yaml https://raw.githubusercontent.com/Jaibw/sre_batch/main/loop/users.yaml
 ansible-vault encrypt users.yaml
 cat users.yaml
 ansible-vault decrypt users.yaml
