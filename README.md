@@ -12,3 +12,11 @@ wget https://raw.githubusercontent.com/Jaibw/sre_batch/main/demo/ntp.conf
 wget https://raw.githubusercontent.com/Jaibw/sre_batch/main/demo/ntp-ubuntu.yaml
 ansible-playbook ntp-ubuntu.yaml
 </pre>
+
+# Users with Vars  
+<pre>
+cd ~/name
+wget https://raw.githubusercontent.com/Jaibw/sre_batch/main/user-with-vars.yaml
+ansible-playbook user-with-vars.yaml -e username=name0001
+
+</pre>
