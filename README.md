@@ -39,6 +39,6 @@ cat users.yaml
 ansible-vault encrypt users.yaml
 cat users.yaml
 ansible-vault view users.yaml
-ansible-vault edit users.yaml
+ansible-vault edit users.yaml                               # for exit press ESC and then :q press enter 
 ansible-playbook users.yaml --ask-vault-pass
 </pre>
