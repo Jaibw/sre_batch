@@ -1,0 +1,15 @@
+---
+- hosts: ubuntu
+  become: true
+  tasks:
+    - name: NTP OS Package Installation
+      apt: name=ntp update_cache=yes state=present
+    - name: NTP File Configurations
+      copy: src=ntp.conf dest=/etc/ntp.conf
+      notify:
+        - restart ntp
+    - name: To start NTP services
+      service: name=ntp state=started enabled=yes
+  handlers:
+  - name: restart ntp
+    service: name=ntp state=restarted 
