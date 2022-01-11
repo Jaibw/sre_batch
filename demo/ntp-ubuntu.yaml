@@ -1,5 +1,5 @@
 ---
-- hosts: ubuntu
+- hosts: linux
   become: true
   tasks:
     - name: NTP OS Package Installation
