@@ -27,3 +27,17 @@ cd ~/name
 wget https://raw.githubusercontent.com/Jaibw/sre_batch/main/loop/users.yaml
 ansible-playbook users.yaml
 </pre>
+
+# Secure Playbook   
+<pre>
+wget https://raw.githubusercontent.com/Jaibw/sre_batch/main/loop/users.yaml
+ansible-vault encrypt users.yaml
+cat users.yaml
+ansible-vault decrypt users.yaml
+cat users.yaml
+ansible-vault encrypt users.yaml
+cat users.yaml
+ansible-vault view users.yaml
+ansible-vault edit users.yaml
+ansible-playbook users.yaml --ask-vault-pass
+</pre>
