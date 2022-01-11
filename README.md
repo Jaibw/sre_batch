@@ -20,3 +20,10 @@ wget https://raw.githubusercontent.com/Jaibw/sre_batch/main/user-with-vars.yaml
 ansible-playbook user-with-vars.yaml -e username=name0001
 
 </pre>
+
+# Users with loop   
+<pre>
+cd ~/name
+wget https://raw.githubusercontent.com/Jaibw/sre_batch/main/loop/users.yaml
+ansible-playbook users.yaml
+</pre>
