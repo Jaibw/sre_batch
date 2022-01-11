@@ -1,0 +1,17 @@
+---
+- hosts: linux
+  become: yes
+  vars:
+    username: user-name
+  tasks:
+    - name: "Ensure group - {{ username }}"
+      group:
+       name: "{{ username }}"
+       state: present
+ 
+    - name: "Add the user - {{ username }}"
+      user:
+       name: "{{ username }}"
+       comment: "{{ username }}"
+       group: "{{ username }}"
+       update_password: on_create
