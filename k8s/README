@@ -1,0 +1,6 @@
+cd jai
+wget -O service-with-deployment.yaml https://raw.githubusercontent.com/Jaibw/sre_batch/main/k8s/service-with-deployment.yaml
+sed 's/username/jai/g' service-with-deployment.yaml > service-deployment.yaml
+kubectl create -f service-deployment.yaml
+kubectl get service | grep jai
+http://52.53.188.82:3####
