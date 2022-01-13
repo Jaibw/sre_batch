@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: jai
+  name: username
 spec:
   type: NodePort
   selector:
-    app: jai
+    app: username
   ports:
     - port: 80
       targetPort: 80
@@ -13,18 +13,18 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: jai-deployment
+  name: username-deployment
   labels:
-    app: jai
+    app: username
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: jai
+      app: username
   template:
     metadata:
       labels:
-        app: jai
+        app: username
     spec:
       containers:
       - name: nginx
